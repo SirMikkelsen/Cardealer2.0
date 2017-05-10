@@ -100,6 +100,7 @@
     <Compile Include="Controllers\Domain\Pair\SwapController.cs" />
     <Compile Include="Models\App\Filter.cs" />
     <Compile Include="Models\App\FilterManager.cs" />
+    <Compile Include="Models\Base\PersonBase.cs" />
     <Compile Include="Models\Domain\Bil\Bil.cs" />
     <Compile Include="Models\Domain\Bil\BilKatalog.cs" />
     <Compile Include="Models\Domain\Kunde\Kunde.cs" />

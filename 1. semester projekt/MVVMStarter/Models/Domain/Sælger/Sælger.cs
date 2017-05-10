@@ -5,7 +5,7 @@ using MVVMStarter.Validators.App;
 
 namespace MVVMStarter.Models.Domain.Sælger
 {
-    public class Sælger : DomainClassBase
+    public class Sælger : PersonBase
     {
 
         private int _id;

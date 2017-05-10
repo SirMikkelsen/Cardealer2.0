@@ -12,7 +12,7 @@ using MVVMStarter.Validators.App;
 /// </summary>
 namespace MVVMStarter.Models.Domain.Kunde
 {
-    public class Kunde : DomainClassBase
+    public class Kunde : PersonBase
     {
         private int _kørekortNr;
         private int _kreditkortNr;
