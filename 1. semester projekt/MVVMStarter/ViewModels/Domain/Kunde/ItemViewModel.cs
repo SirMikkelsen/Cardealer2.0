@@ -12,7 +12,7 @@ namespace MVVMStarter.ViewModels.Domain.Kunde
 
         public override string Description
         {
-            get { return DomainObject.KreditkortNr.ToString(); }
+            get { return DomainObject.Email.ToString(); }
         }
 
         //public override int FontSize

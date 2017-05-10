@@ -32,6 +32,9 @@ namespace MVVMStarter.ViewModels.Domain.Kunde
             nonFixedKeyProperties.Add(nameof(KundeClass.KørekortNr));
             nonFixedKeyProperties.Add(nameof(KundeClass.KreditkortNr));
             nonFixedKeyProperties.Add(nameof(KundeClass.RegistreringsNr));
+            nonFixedKeyProperties.Add(nameof(KundeClass.Navn));
+            nonFixedKeyProperties.Add(nameof(KundeClass.Email));
+            nonFixedKeyProperties.Add(nameof(KundeClass.TlfNr));
 
             StateManager.AddFixedPropertiesDefaultStates(fixedProperties);
             StateManager.AddNonFixedPropertiesDefaultStates(nonFixedKeyProperties);

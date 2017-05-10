@@ -21,6 +21,9 @@ namespace MVVMStarter.ViewModels.Domain.Sælger
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) properties here
             nonFixedKeyProperties.Add("Kommission");
+            nonFixedKeyProperties.Add("Navn");
+            nonFixedKeyProperties.Add("Email");
+            nonFixedKeyProperties.Add("TlfNr");
 
             StateManager.AddFixedPropertiesDefaultStates(fixedProperties);
             StateManager.AddNonFixedPropertiesDefaultStates(nonFixedKeyProperties);

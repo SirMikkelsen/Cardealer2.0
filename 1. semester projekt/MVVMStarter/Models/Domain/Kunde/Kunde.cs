@@ -40,6 +40,9 @@ namespace MVVMStarter.Models.Domain.Kunde
 
         public override void SetDefaultValues()
         {
+            Navn = "(Navn)";
+            Email = "(E-Mail)";
+            TlfNr = (12345678);
             _kørekortNr = (1234567890);
             _kreditkortNr = (132456789);
             _registreringsNr = (1234546789);

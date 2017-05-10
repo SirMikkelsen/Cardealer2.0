@@ -80,6 +80,30 @@
                 <!--MYPROPERTY property-->
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
+                               Text="{Binding ViewControlStates[Navn].Description}"/>
+                    <TextBox Style="{StaticResource TextBoxStyle}" 
+                             IsEnabled="{Binding ViewControlStates[Navn].Enabled}"
+                             Visibility="{Binding ViewControlStates[Navn].VisibilityState}"
+                             Text="{Binding DetailsViewModel.Navn, Mode=TwoWay}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource TextBlockStyle}" 
+                               Text="{Binding ViewControlStates[Email].Description}"/>
+                    <TextBox Style="{StaticResource TextBoxStyle}" 
+                             IsEnabled="{Binding ViewControlStates[Email].Enabled}"
+                             Visibility="{Binding ViewControlStates[Email].VisibilityState}"
+                             Text="{Binding DetailsViewModel.Email, Mode=TwoWay}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource TextBlockStyle}" 
+                               Text="{Binding ViewControlStates[TlfNr].Description}"/>
+                    <TextBox Style="{StaticResource TextBoxStyle}" 
+                             IsEnabled="{Binding ViewControlStates[TlfNr].Enabled}"
+                             Visibility="{Binding ViewControlStates[TlfNr].VisibilityState}"
+                             Text="{Binding DetailsViewModel.TlfNr, Mode=TwoWay}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[KørekortNr].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
                                  IsEnabled="{Binding ViewControlStates[KørekortNr].Enabled}"

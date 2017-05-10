@@ -28,6 +28,9 @@ namespace MVVMStarter.Models.Domain.Sælger
 
         public override void SetDefaultValues()
         {
+            Navn = "(Navn)";
+            Email = "(Email)";
+            TlfNr = (12345678);
             // Set default values for properties here
         }
     }

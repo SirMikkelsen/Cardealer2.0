@@ -64,6 +64,37 @@ namespace MVVMStarter.ViewModels.Domain.Sælger
                 OnPropertyChanged();
             }
         }
+
+        public string Navn
+        {
+            get { return DomainObject.Navn; }
+            set
+            {
+                DomainObject.Navn = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Email
+        {
+            get { return DomainObject.Email; }
+            set
+            {
+                DomainObject.Email = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int TlfNr
+        {
+            get { return DomainObject.TlfNr; }
+            set
+            {
+                DomainObject.TlfNr = value;
+                OnPropertyChanged();
+            }
+        }
+
         public DetailsViewModel(SælgerClass obj) : base(obj)
         {
         }
