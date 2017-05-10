@@ -47,6 +47,10 @@ namespace MVVMStarter.Views.App
             {
                 AppFrame.Navigate(typeof(Domain.Sælger.View));
             }
+            if (KundeView.IsSelected)
+            {
+                AppFrame.Navigate(typeof(Domain.Kunde.View));
+            }
 
             string nameOfSelection = ((ListBoxItem)e.AddedItems[0]).Name;
             if (nameOfSelection == "Load")

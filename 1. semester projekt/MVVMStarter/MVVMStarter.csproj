@@ -102,6 +102,8 @@
     <Compile Include="Models\App\FilterManager.cs" />
     <Compile Include="Models\Domain\Bil\Bil.cs" />
     <Compile Include="Models\Domain\Bil\BilKatalog.cs" />
+    <Compile Include="Models\Domain\Kunde\Kunde.cs" />
+    <Compile Include="Models\Domain\Kunde\KundeKatalog.cs" />
     <Compile Include="Models\Domain\Pair\Catalog.cs" />
     <Compile Include="Models\Domain\Pair\Pair.cs" />
     <Compile Include="Models\Domain\Student\Catalog.cs" />
@@ -122,12 +124,20 @@
     <Compile Include="ViewModels\Domain\Bil\MasterDetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Bil\MasterViewModel.cs" />
     <Compile Include="ViewModels\Domain\Bil\ViewModelFactorycs.cs" />
+    <Compile Include="ViewModels\Domain\Kunde\DetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Kunde\ItemViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Kunde\MasterDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Kunde\MasterViewModel.cs" />
+    <Compile Include="ViewModels\Domain\Kunde\ViewModelFactory.cs" />
     <Compile Include="ViewModels\Domain\Sælger\DetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Sælger\ItemViewModel.cs" />
     <Compile Include="ViewModels\Domain\Sælger\MasterDetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Sælger\MasterViewModel.cs" />
     <Compile Include="ViewModels\Domain\Sælger\ViewModelFactory.cs" />
     <Compile Include="Views\Domain\Bil\View.xaml.cs">
+      <DependentUpon>View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Domain\Kunde\View.xaml.cs">
       <DependentUpon>View.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Domain\Student\View.xaml.cs">
@@ -203,6 +213,7 @@
     <Content Include="Assets\App\CloudLoad.png" />
     <Content Include="Assets\App\CloudSave.png" />
     <Content Include="Assets\Domain\Bil\01.jpg" />
+    <Content Include="Assets\Domain\Kunde\01.jpg" />
     <Content Include="Assets\Domain\Pair\Pair.JPG" />
     <Content Include="Assets\Domain\Photo\01.jpg" />
     <Content Include="Assets\Domain\Photo\02.jpg" />
@@ -250,6 +261,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Domain\Bil\View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Domain\Kunde\View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

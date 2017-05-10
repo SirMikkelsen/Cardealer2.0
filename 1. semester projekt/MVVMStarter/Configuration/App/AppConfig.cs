@@ -37,6 +37,10 @@
             LoadModels += Models.Domain.Sælger.Catalog.Instance.Load;
             SaveModels += Models.Domain.Sælger.Catalog.Instance.Save;
 
+            LoadModels += Models.Domain.Kunde.Catalog.Instance.Load;
+            SaveModels += Models.Domain.Kunde.Catalog.Instance.Save;
+
+
         }
 
         /// <summary>
