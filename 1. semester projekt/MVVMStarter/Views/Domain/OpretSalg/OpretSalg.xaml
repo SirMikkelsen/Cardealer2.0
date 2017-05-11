@@ -113,8 +113,8 @@
                     <TextBlock Style="{StaticResource TextBlockStyle}"
                                Text="{Binding ViewControlStates[Bil].Description}" />
                     <ComboBox Margin="5,5,5,5"
-                              IsEnabled="{Binding ViewControlStates[Dato].Enabled}"
-                              Visibility="{Binding ViewControlStates[Dato].VisibilityState}"
+                              IsEnabled="{Binding ViewControlStates[Bil].Enabled}"
+                              Visibility="{Binding ViewControlStates[Bil].VisibilityState}"
                               ItemsSource="{Binding DetailsViewModel.CollectionBil}"
                               SelectedItem="{Binding DetailsViewModel.SelectedBil, Mode=TwoWay}">
                         <ComboBox.ItemTemplate>
@@ -126,6 +126,24 @@
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                         </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource TextBlockStyle}"
+                               Text="{Binding ViewControlStates[Kunde].Description}" />
+                    <ComboBox Margin="5,5,5,5"
+                              IsEnabled="{Binding ViewControlStates[Kunde].Enabled}"
+                              Visibility="{Binding ViewControlStates[Kunde].VisibilityState}"
+                              ItemsSource="{Binding DetailsViewModel.CollectionKunde}"
+                              SelectedItem="{Binding DetailsViewModel.SelectedKunde, Mode=TwoWay}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style="{StaticResource TextBlockInSubComboStyle}"
+                                               Text="{Binding Description}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
