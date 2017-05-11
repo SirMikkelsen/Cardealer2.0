@@ -1,9 +1,4 @@
-﻿<!--TEMPLATE: You must 
-    1) Create a file called View.xaml in your domain folder (under Views/Domain)
-    2) Delete the entire content of the file
-    3) Copy-paste the entire content of this template into the file
-    4) in the top namespace declarations: replace the text _REPLACEME_ with the name of your domain
-    5) Delete this comment-->
+﻿
 
 <Page
     x:Class="MVVMStarter.Views.Domain.OpretSalg.View"
@@ -17,7 +12,7 @@
     <Page.DataContext>
         <vm:MasterDetailsViewModel/>
     </Page.DataContext>
-
+    
     <Page.Resources>
         <Style x:Key="TextBlockStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>
@@ -93,20 +88,21 @@
                 <!--MYPROPERTY property-->
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[Dato].Description}"/>
-                    <TextBox Style="{StaticResource TextBoxStyle}" 
-                                 IsEnabled="{Binding ViewControlStates[Dato].Enabled}"
-                                 Visibility="{Binding ViewControlStates[Dato].VisibilityState}"
-                                 Text="{Binding DetailsViewModel.Dato, Mode=TwoWay}" />
+                                   Text="{Binding ViewControlStates[SalgsDato].Description}"/>
+                    <DatePicker IsEnabled="{Binding ViewControlStates[SalgsDato].Enabled}"
+                                 Visibility="{Binding ViewControlStates[SalgsDato].VisibilityState}"
+                                Margin="5,5,5,5" Width="300"
+                                 Date="{Binding DetailsViewModel.SalgsDato, Mode=TwoWay}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[Pris].Description}"/>
+                                   Text="{Binding ViewControlStates[SlutPris].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
-                                 IsEnabled="{Binding ViewControlStates[Pris].Enabled}"
-                                 Visibility="{Binding ViewControlStates[Pris].VisibilityState}"
-                                 Text="{Binding DetailsViewModel.Pris, Mode=TwoWay}" />
+                                 IsEnabled="{Binding ViewControlStates[SlutPris].Enabled}"
+                                 Visibility="{Binding ViewControlStates[SlutPris].VisibilityState}"
+                                
+                                 Text="{Binding DetailsViewModel.SlutPris, Mode=TwoWay}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">

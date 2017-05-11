@@ -51,7 +51,7 @@ namespace MVVMStarter.Views.App
             {
                 AppFrame.Navigate(typeof(Domain.Kunde.View));
             }
-            if (OpretsalgView.IsSelected)
+            if (OpretSalgView.IsSelected)
             {
                 AppFrame.Navigate(typeof(Domain.OpretSalg.View));
             }
