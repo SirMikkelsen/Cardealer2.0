@@ -53,7 +53,7 @@ namespace MVVMStarter.Views.App
             }
             if (OpretSalgView.IsSelected)
             {
-                AppFrame.Navigate(typeof(Domain.OpretSalg.View));
+                AppFrame.Navigate(typeof(Domain.OpretSalg.OpretSalg));
             }
 
             string nameOfSelection = ((ListBoxItem)e.AddedItems[0]).Name;
