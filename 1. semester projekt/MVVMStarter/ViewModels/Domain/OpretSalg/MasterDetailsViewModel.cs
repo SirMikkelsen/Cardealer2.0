@@ -26,7 +26,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             fixedProperties.Add("Bil");
             fixedProperties.Add("Kunde");
 
-            //List<string> nonFixedKeyProperties = new List<string>();
+            List<string> nonFixedKeyProperties = new List<string>();
             //// Add names of "non-fixed" (can be changed after creation) properties here
             nonFixedKeyProperties.Add("dato");
             nonFixedKeyProperties.Add("pris");
