@@ -23,7 +23,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             }
         }
 
-        public int Slutpris
+        public int SlutPris
         {
             get { return DomainObject.SlutPris; }
             set
@@ -45,7 +45,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
 
         public Bil.ItemViewModel SelectedBil
         {
-            get { return GetBilItenViewModel(DomainObject.BilKey); }
+            get { return GetBilItemViewModel(DomainObject.BilKey); }
             set
             {
                 if (value != null)
@@ -55,7 +55,19 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             }
         }
 
-        private Bil.ItemViewModel GetBilItenViewModel(int Key)
+        public Kunde.ItemViewModel SelectedKunde
+        {
+            get { return GetKundeItemViewModel(DomainObject.KundeKey); }
+            set
+            {
+                if (value != null)
+                {
+                    DomainObject.KundeKey = value.DomainObject.Key;
+                }
+            }
+        }
+
+        private Bil.ItemViewModel GetBilItemViewModel(int Key)
         {
             foreach (var bilItemViewModel in _observableCollectionBil)
             {
@@ -67,7 +79,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             return null;
         }
 
-        private Kunde.ItemViewModel GetKundeItenViewModel(int Key)
+        private Kunde.ItemViewModel GetKundeItemViewModel(int Key)
         {
             foreach (var kundeItemViewModel in _observableCollectionKunde)
             {

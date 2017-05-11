@@ -13,10 +13,10 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
         // replace the default implementation with your own
         // (the below examples contain the default implementation)
         //
-        //public override string Description
-        //{
-        //    get { return DomainObject.ToString(); }
-        //}
+        public override string Description
+        {
+            get { return DomainObject.SlutPris + " kr."; }
+        }
 
         //public override int FontSize
         //{
