@@ -88,11 +88,11 @@
                 <!--MYPROPERTY property-->
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[SalgsDato].Description}"/>
-                    <DatePicker IsEnabled="{Binding ViewControlStates[SalgsDato].Enabled}"
-                                 Visibility="{Binding ViewControlStates[SalgsDato].VisibilityState}"
+                                   Text="{Binding ViewControlStates[Dato].Description}"/>
+                    <DatePicker IsEnabled="{Binding ViewControlStates[Dato].Enabled}"
+                                 Visibility="{Binding ViewControlStates[Dato].VisibilityState}"
                                 Margin="5,5,5,5" Width="300"
-                                 Date="{Binding DetailsViewModel.SalgsDato, Mode=TwoWay}" />
+                                 Date="{Binding DetailsViewModel.Dato, Mode=TwoWay}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
@@ -142,14 +142,6 @@
                     </ComboBox>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[Dato].Description}"/>
-                    <TextBox Style="{StaticResource TextBoxStyle}" 
-                                 IsEnabled="{Binding ViewControlStates[Dato].Enabled}"
-                                 Visibility="{Binding ViewControlStates[Dato].VisibilityState}"
-                                 Text="{Binding DetailsViewModel.Dato, Mode=TwoWay}" />
-                </StackPanel>
 
             </StackPanel>
 
