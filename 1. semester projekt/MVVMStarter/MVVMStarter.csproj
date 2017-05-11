@@ -226,6 +226,7 @@
     <Content Include="Assets\App\CloudSave.png" />
     <Content Include="Assets\Domain\Bil\01.jpg" />
     <Content Include="Assets\Domain\Kunde\01.jpg" />
+    <Content Include="Assets\Domain\OpretSalg\01.jpg" />
     <Content Include="Assets\Domain\Pair\Pair.JPG" />
     <Content Include="Assets\Domain\Photo\01.jpg" />
     <Content Include="Assets\Domain\Photo\02.jpg" />

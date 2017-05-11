@@ -40,6 +40,9 @@
             LoadModels += Models.Domain.Kunde.Catalog.Instance.Load;
             SaveModels += Models.Domain.Kunde.Catalog.Instance.Save;
 
+            LoadModels += Models.Domain.OpretSalg.Catalog.Instance.Load;
+            SaveModels += Models.Domain.OpretSalg.Catalog.Instance.Save;
+
 
         }
 

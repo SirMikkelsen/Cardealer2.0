@@ -51,7 +51,7 @@
                             <TextBlock FontSize="24" Margin="20,0,0,0">Students</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="SælgerView"> 
+                    <ListBoxItem Name="SælgerView">
                         <StackPanel Orientation="Horizontal">
                             <Image Width="40" Height="40" Source="ms-appx:///Assets/Domain/Sælger/01.jpg"/>
                             <TextBlock FontSize="24" Margin="20,0,0,0">Sælger</TextBlock>
@@ -68,6 +68,12 @@
                             <Image Width="40" Height="40" Source="ms-appx:///Assets/Domain/Kunde/01.jpg"/>
                             <TextBlock FontSize="24" Margin="20,0,0,0">Kunde</TextBlock>
                         </StackPanel>
+                    </ListBoxItem>
+                   <ListBoxItem Name="OpretsalgView">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="40" Height="40" Source="ms-appx:///Assets/Domain/OpretSalg/01.jpg"/>
+                        <TextBlock FontSize="24" Margin="20,0,0,0">Kunde</TextBlock>
+                    </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem Name="Load">
                         <StackPanel Orientation="Horizontal">
