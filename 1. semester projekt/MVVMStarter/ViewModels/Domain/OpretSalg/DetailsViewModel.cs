@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using Windows.Storage.Pickers.Provider;
+using MVVMStarter.Models.App;
 using MVVMStarter.Validators.App;
 using MVVMStarter.ViewModels.Base;
 using OpretSalgClass = MVVMStarter.Models.Domain.OpretSalg.OpretSalg;
@@ -28,7 +29,6 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
                 DomainObject.SalgsDato = value;
                 OnPropertyChanged();
             }
-
         }
 
         public int Slutpris
@@ -53,7 +53,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
 
         public Bil.ItemViewModel SelectedBil
         {
-            get{return GetBilItemViewModel(DomainObject.BilKey);}
+            get { return GetBilItenViewModel(DomainObject.BilKey); }
             set
             {
                 if (value != null)
@@ -61,12 +61,47 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
                     DomainObject.BilKey = value.DomainObject.Key;
                 }
             }
-                
-            
         }
+
+        private Bil.ItemViewModel GetBilItenViewModel(int Key)
+        {
+            foreach (var bilItemViewModel in _observableCollectionBil)
+            {
+                if (bilItemViewModel.DomainObject.Key == Key)
+                {
+                    return bilItemViewModel;
+                }
+            }
+            return null;
+        }
+
+        private Kunde.ItemViewModel GetKundeItenViewModel(int Key)
+        {
+            foreach (var kundeItemViewModel in _observableCollectionKunde)
+            {
+                if (kundeItemViewModel.DomainObject.Key == Key)
+                {
+                    return kundeItemViewModel;
+                }
+            }
+            return null;
+        }
+
 
         public DetailsViewModel(OpretSalgClass obj) : base(obj)
         {
+            _observableCollectionBil = new ObservableCollection<Bil.ItemViewModel>();
+            _observableCollectionKunde = new ObservableCollection<Kunde.ItemViewModel>();
+
+            foreach (var bil in ObjectProvider.BilCatalog.All)
+            {
+                _observableCollectionBil.Add(new Bil.ItemViewModel(bil));
+            }
+
+            foreach (var kunde in ObjectProvider.KundeCatalog.All)
+            {
+                _observableCollectionKunde.Add(new Kunde.ItemViewModel(kunde));
+            }
         }
     }
 }

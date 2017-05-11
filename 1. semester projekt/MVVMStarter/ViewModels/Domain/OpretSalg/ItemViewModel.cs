@@ -1,4 +1,5 @@
 ﻿using System.Dynamic;
+using MVVMStarter.Models.App;
 using MVVMStarter.ViewModels.Base;
 using OretSalgClass = MVVMStarter.Models.Domain.OpretSalg.OpretSalg;
 using BilClass = MVVMStarter.Models.Domain.Bil.Bil;
@@ -39,8 +40,14 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
 
         private BilClass GetBil()
         {
-            return ObjectProvider.Catalog.Read(DomainObject.BilKey);
+            return ObjectProvider.BilCatalog.Read(DomainObject.BilKey);
         }
+        private KundeClass GetKunde()
+        {
+            return ObjectProvider.KundeCatalog.Read(DomainObject.KundeKey);
+        }
+
+
         public ItemViewModel(OretSalgClass obj) : base(obj)
         {
         }
