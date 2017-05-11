@@ -12,7 +12,8 @@ namespace MVVMStarter.Models.Domain.Bil
         private string _model;
         private string _type;
         private string _farve;
-        private int _idNummer;
+        private int _stelNr;
+        private double _pris;
 
 
 
@@ -47,11 +48,17 @@ namespace MVVMStarter.Models.Domain.Bil
 
 
 
-        public int IDnummer
+        public int StelNr
         {
-            get { return _idNummer; }
-            set { _idNummer = value; }
+            get { return _stelNr; }
+            set { _stelNr = value; }
             
+        }
+
+        public double Pris
+        {
+            get { return _pris; }
+            set { _pris = value; }
         }
 
 
@@ -62,7 +69,7 @@ namespace MVVMStarter.Models.Domain.Bil
             _model = "M3";
             _type = "Person bil";
             _farve = "Sort";
-            _idNummer = 88273273;
+            _stelNr = 88273273;
         }
     }
 }

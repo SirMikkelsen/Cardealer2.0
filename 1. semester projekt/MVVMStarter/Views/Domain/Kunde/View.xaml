@@ -112,11 +112,11 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                               Text="{Binding ViewControlStates[KreditkortNr].Description}"/>
+                               Text="{Binding ViewControlStates[KontoNr].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
-                             IsEnabled="{Binding ViewControlStates[KreditkortNr].Enabled}"
-                             Visibility="{Binding ViewControlStates[KreditkortNr].VisibilityState}"
-                             Text="{Binding DetailsViewModel.KreditkortNr, Mode=TwoWay}" />
+                             IsEnabled="{Binding ViewControlStates[KontoNr].Enabled}"
+                             Visibility="{Binding ViewControlStates[KontoNr].VisibilityState}"
+                             Text="{Binding DetailsViewModel.KontoNr, Mode=TwoWay}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 

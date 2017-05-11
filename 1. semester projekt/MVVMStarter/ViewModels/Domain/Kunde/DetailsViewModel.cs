@@ -36,12 +36,12 @@ namespace MVVMStarter.ViewModels.Domain.Kunde
             }
         }
 
-        public int KreditkortNr
+        public int KontoNr
         {
-            get { return DomainObject.KreditkortNr; }
+            get { return DomainObject.KontoNr; }
             set
             {
-                DomainObject.KreditkortNr = value;
+                DomainObject.KontoNr = value;
                 OnPropertyChanged();
             }
         }

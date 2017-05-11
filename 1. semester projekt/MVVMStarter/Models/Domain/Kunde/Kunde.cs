@@ -15,7 +15,7 @@ namespace MVVMStarter.Models.Domain.Kunde
     public class Kunde : PersonBase
     {
         private int _kørekortNr;
-        private int _kreditkortNr;
+        private int _kontoNr;
         private int _registreringsNr;
 
         public int KørekortNr
@@ -24,10 +24,10 @@ namespace MVVMStarter.Models.Domain.Kunde
             set { _kørekortNr = value; }
         }
 
-        public int KreditkortNr
+        public int KontoNr
         {
-            get { return _kreditkortNr; }
-            set { _kreditkortNr = value; }
+            get { return _kontoNr; }
+            set { _kontoNr = value; }
         }
         
         public int RegistreringsNr
@@ -44,7 +44,7 @@ namespace MVVMStarter.Models.Domain.Kunde
             Email = "(E-Mail)";
             TlfNr = (12345678);
             _kørekortNr = (1234567890);
-            _kreditkortNr = (132456789);
+            _kontoNr = (132456789);
             _registreringsNr = (1234546789);
         }
     }

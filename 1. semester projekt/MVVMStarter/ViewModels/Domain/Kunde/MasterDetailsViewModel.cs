@@ -30,7 +30,7 @@ namespace MVVMStarter.ViewModels.Domain.Kunde
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) properties here
             nonFixedKeyProperties.Add(nameof(KundeClass.KørekortNr));
-            nonFixedKeyProperties.Add(nameof(KundeClass.KreditkortNr));
+            nonFixedKeyProperties.Add(nameof(KundeClass.KontoNr));
             nonFixedKeyProperties.Add(nameof(KundeClass.RegistreringsNr));
             nonFixedKeyProperties.Add(nameof(KundeClass.Navn));
             nonFixedKeyProperties.Add(nameof(KundeClass.Email));

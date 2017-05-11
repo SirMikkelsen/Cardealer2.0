@@ -12,7 +12,7 @@ namespace MVVMStarter.ViewModels.Domain.Bil
         //
         public override string Description
         {
-            get { return DomainObject.IDnummer.ToString(); }
+            get { return DomainObject.StelNr.ToString(); }
         }
 
         //public override int FontSize

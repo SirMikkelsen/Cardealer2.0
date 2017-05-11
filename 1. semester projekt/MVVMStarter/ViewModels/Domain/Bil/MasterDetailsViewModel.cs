@@ -20,9 +20,10 @@ namespace MVVMStarter.ViewModels.Domain.Bil
             // Add names of "non-fixed" (can be changed after creation) properties here
             nonFixedKeyProperties.Add(nameof(BilClass.Brand));
             nonFixedKeyProperties.Add(nameof(BilClass.Farve));
-            nonFixedKeyProperties.Add(nameof(BilClass.IDnummer));
+            nonFixedKeyProperties.Add(nameof(BilClass.StelNr));
             nonFixedKeyProperties.Add(nameof(BilClass.Model));
             nonFixedKeyProperties.Add(nameof(BilClass.Type));
+            nonFixedKeyProperties.Add(nameof(BilClass.Pris));
 
 
             StateManager.AddFixedPropertiesDefaultStates(fixedProperties);

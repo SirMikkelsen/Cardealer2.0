@@ -80,12 +80,22 @@ namespace MVVMStarter.ViewModels.Domain.Bil
             }
         }
 
-        public int IDnummer
+        public int StelNr
         {
-            get { return DomainObject.IDnummer; }
+            get { return DomainObject.StelNr; }
             set
             {
-                DomainObject.IDnummer = value;
+                DomainObject.StelNr = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public double Pris
+        {
+            get { return DomainObject.Pris; }
+            set
+            {
+                DomainObject.Pris = value;
                 OnPropertyChanged();
             }
         }

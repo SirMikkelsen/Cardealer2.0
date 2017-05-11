@@ -127,14 +127,23 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[IDnummer].Description}"/>
+                                   Text="{Binding ViewControlStates[StelNr].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
-                                 IsEnabled="{Binding ViewControlStates[IDnummer].Enabled}"
-                                 Visibility="{Binding ViewControlStates[IDnummer].VisibilityState}"
-                                 Text="{Binding DetailsViewModel.IDnummer, Mode=TwoWay}" />
+                                 IsEnabled="{Binding ViewControlStates[StelNr].Enabled}"
+                                 Visibility="{Binding ViewControlStates[StelNr].VisibilityState}"
+                                 Text="{Binding DetailsViewModel.StelNr, Mode=TwoWay}" />
 
                 </StackPanel>
 
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource TextBlockStyle}" 
+                               Text="{Binding ViewControlStates[Pris].Description}"/>
+                    <TextBox Style="{StaticResource TextBoxStyle}" 
+                             IsEnabled="{Binding ViewControlStates[Pris].Enabled}"
+                             Visibility="{Binding ViewControlStates[Pris].VisibilityState}"
+                             Text="{Binding DetailsViewModel.Pris, Mode=TwoWay}" />
+
+                </StackPanel>
 
 
             </StackPanel>
