@@ -107,6 +107,7 @@
     <Compile Include="Models\Domain\Kunde\KundeKatalog.cs" />
     <Compile Include="Models\Domain\Pair\Catalog.cs" />
     <Compile Include="Models\Domain\Pair\Pair.cs" />
+    <Compile Include="Models\Domain\Salg\OpretSalg.cs" />
     <Compile Include="Models\Domain\Student\Catalog.cs" />
     <Compile Include="Models\Domain\Student\Student.cs" />
     <Compile Include="Models\Domain\Sælger\Sælger.cs" />
@@ -130,6 +131,8 @@
     <Compile Include="ViewModels\Domain\Kunde\MasterDetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Kunde\MasterViewModel.cs" />
     <Compile Include="ViewModels\Domain\Kunde\ViewModelFactory.cs" />
+    <Compile Include="ViewModels\Domain\OpretSalg\DetailsViewModel.cs" />
+    <Compile Include="ViewModels\Domain\OpretSalg\ItemViewModel.cs" />
     <Compile Include="ViewModels\Domain\Sælger\DetailsViewModel.cs" />
     <Compile Include="ViewModels\Domain\Sælger\ItemViewModel.cs" />
     <Compile Include="ViewModels\Domain\Sælger\MasterDetailsViewModel.cs" />
