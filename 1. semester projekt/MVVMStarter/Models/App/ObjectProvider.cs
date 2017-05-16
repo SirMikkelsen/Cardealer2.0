@@ -18,6 +18,11 @@ namespace MVVMStarter.Models.App
             get { return Domain.Kunde.Catalog.Instance; }
         }
 
+        public static Domain.Sælger.Catalog SælgerCatalog
+        {
+            get { return Domain.Sælger.Catalog.Instance; }
+        }
+
         public static Domain.OpretSalg.Catalog SalgsCatalog
         {
             get { return Domain.OpretSalg.Catalog.Instance; }

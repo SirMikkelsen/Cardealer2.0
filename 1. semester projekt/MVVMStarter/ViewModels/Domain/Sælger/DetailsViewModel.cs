@@ -58,11 +58,6 @@ namespace MVVMStarter.ViewModels.Domain.Sælger
         public double Kommission
         {
             get { return DomainObject.Kommission; }
-            set
-            {
-                DomainObject.Kommission = value;
-                OnPropertyChanged();
-            }
         }
 
         public string Navn

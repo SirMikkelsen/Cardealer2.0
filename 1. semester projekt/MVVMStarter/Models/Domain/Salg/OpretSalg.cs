@@ -11,9 +11,18 @@ namespace MVVMStarter.Models.Domain.OpretSalg
 
         private int _bilkey;
         private int _kundekey;
+        private int _sælgerkey;
+
 
         private DateTimeOffset _salgsdato;
         private int _slutpris;
+
+
+        public int SælgerKey
+        {
+            get { return _sælgerkey; }
+            set { _sælgerkey = value; }
+        }
 
         public void Salg()
         {

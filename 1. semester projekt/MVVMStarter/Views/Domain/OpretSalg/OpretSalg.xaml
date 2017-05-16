@@ -134,6 +134,24 @@
                         </ComboBox.ItemTemplate>
                     </ComboBox>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource TextBlockStyle}"
+                               Text="{Binding ViewControlStates[Sælger].Description}" />
+                    <ComboBox Margin="5,5,5,5"
+                              IsEnabled="{Binding ViewControlStates[Sælger].Enabled}"
+                              Visibility="{Binding ViewControlStates[Sælger].VisibilityState}"
+                              ItemsSource="{Binding DetailsViewModel.CollectionSælger}"
+                              SelectedItem="{Binding DetailsViewModel.SelectedSælger, Mode=TwoWay}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style="{StaticResource TextBlockStyle}"
+                                               Text="{Binding Description}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </StackPanel>
 
 
             </StackPanel>

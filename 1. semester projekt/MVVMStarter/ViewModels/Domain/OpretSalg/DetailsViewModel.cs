@@ -12,6 +12,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
     {
         private ObservableCollection<Bil.ItemViewModel> _observableCollectionBil;
         private ObservableCollection<Kunde.ItemViewModel> _observableCollectionKunde;
+        private ObservableCollection<Sælger.ItemViewModel> _observableCollectionSælger;
 
         public DateTimeOffset Dato
         {
@@ -42,6 +43,10 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
         {
             get { return _observableCollectionKunde; }
         }
+        public ObservableCollection<Sælger.ItemViewModel> CollectionSælger
+        {
+            get { return _observableCollectionSælger; }
+        }
 
         public Bil.ItemViewModel SelectedBil
         {
@@ -51,6 +56,17 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
                 if (value != null)
                 {
                     DomainObject.BilKey = value.DomainObject.Key;
+                }
+            }
+        }
+        public Sælger.ItemViewModel SelectedSælger
+        {
+            get { return GetSælgerItemViewModel(DomainObject.SælgerKey); }
+            set
+            {
+                if (value != null)
+                {
+                    DomainObject.SælgerKey = value.DomainObject.Key;
                 }
             }
         }
@@ -79,6 +95,18 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             return null;
         }
 
+        private Sælger.ItemViewModel GetSælgerItemViewModel(int Key)
+        {
+            foreach (var SælgerItemViewModel in _observableCollectionSælger)
+            {
+                if (SælgerItemViewModel.DomainObject.Key == Key)
+                {
+                    return SælgerItemViewModel;
+                }
+            }
+            return null;
+        }
+
         private Kunde.ItemViewModel GetKundeItemViewModel(int Key)
         {
             foreach (var kundeItemViewModel in _observableCollectionKunde)
@@ -96,10 +124,15 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
         {
             _observableCollectionBil = new ObservableCollection<Bil.ItemViewModel>();
             _observableCollectionKunde = new ObservableCollection<Kunde.ItemViewModel>();
+            _observableCollectionSælger = new ObservableCollection<Sælger.ItemViewModel>();
 
             foreach (var bil in ObjectProvider.BilCatalog.All)
             {
                 _observableCollectionBil.Add(new Bil.ItemViewModel(bil));
+            }
+            foreach (var sælger in ObjectProvider.SælgerCatalog.All)
+            {
+                _observableCollectionSælger.Add(new Sælger.ItemViewModel(sælger));
             }
 
             foreach (var kunde in ObjectProvider.KundeCatalog.All)
