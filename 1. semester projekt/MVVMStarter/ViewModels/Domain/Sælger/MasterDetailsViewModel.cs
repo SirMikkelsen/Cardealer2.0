@@ -17,10 +17,10 @@ namespace MVVMStarter.ViewModels.Domain.Sælger
             List<string> fixedProperties = new List<string>();
             // Add names of "fixed" (cannot be changed after creation) properties here
             fixedProperties.Add("ID");
+            fixedProperties.Add("Kommission");
 
             List<string> nonFixedKeyProperties = new List<string>();
             // Add names of "non-fixed" (can be changed after creation) properties here
-            nonFixedKeyProperties.Add("Kommission");
             nonFixedKeyProperties.Add("Navn");
             nonFixedKeyProperties.Add("Email");
             nonFixedKeyProperties.Add("TlfNr");
