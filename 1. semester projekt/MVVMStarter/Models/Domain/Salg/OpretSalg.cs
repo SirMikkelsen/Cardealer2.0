@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using MVVMStarter.Configuration.App;
+using MVVMStarter.Models.App;
 using MVVMStarter.Models.Base;
 using MVVMStarter.Validators.App;
 
@@ -12,10 +13,7 @@ namespace MVVMStarter.Models.Domain.OpretSalg
         private int _bilkey;
         private int _kundekey;
         private int _sælgerkey;
-
-
         private DateTimeOffset _salgsdato;
-        private int _slutpris;
 
 
         public int SælgerKey
@@ -49,10 +47,22 @@ namespace MVVMStarter.Models.Domain.OpretSalg
 
         }
 
-        public int SlutPris
+        public double SlutPris
         {
-            get { return _slutpris; }
-            set { _slutpris = value; }
+            get
+            {
+                Bil.Bil solgtBil = ObjectProvider.BilCatalog.Read(_bilkey);
+
+                if (solgtBil != null)
+                {
+                    return solgtBil.Pris;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+           
 
         }
 
@@ -62,7 +72,6 @@ namespace MVVMStarter.Models.Domain.OpretSalg
             _kundekey = NullKey;
 
             _salgsdato = DateTimeOffset.Now;
-            _slutpris = 0;
         }
     }
 }
