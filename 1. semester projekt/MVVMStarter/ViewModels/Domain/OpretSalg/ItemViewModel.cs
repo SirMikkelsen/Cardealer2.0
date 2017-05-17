@@ -15,7 +15,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
         //
         public override string Description
         {
-            get { return DomainObject.SlutPris + " kr."; }
+            get { return GetKunde().Navn + " " + GetBil().Brand + " " + GetBil().Model; }
         }
 
         //public override int FontSize
