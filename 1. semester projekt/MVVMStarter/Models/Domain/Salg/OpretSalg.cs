@@ -14,6 +14,7 @@ namespace MVVMStarter.Models.Domain.OpretSalg
         private int _kundekey;
         private int _sælgerkey;
         private DateTimeOffset _salgsdato;
+        private Bil.Bil _rabat;
 
 
         public int SælgerKey
@@ -65,6 +66,12 @@ namespace MVVMStarter.Models.Domain.OpretSalg
            
 
         }
+
+        public bool BilVask
+        {
+            get { return SlutPris > 50000; }
+        }
+
 
         public override void SetDefaultValues()
         {

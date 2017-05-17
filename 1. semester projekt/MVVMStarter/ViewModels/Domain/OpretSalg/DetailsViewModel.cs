@@ -30,6 +30,11 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             get { return DomainObject.SlutPris; }
         }
 
+        public bool BilVask
+        {
+            get { return DomainObject.BilVask; }
+        }
+
         public ObservableCollection<Bil.ItemViewModel> CollectionBil
         {
             get { return _observableCollectionBil; }
