@@ -19,7 +19,7 @@
                     FontSize="36" 
                     Content="&#xE700;" 
                     Click="HamburgerButton_Click" />
-            <TextBlock Text ="MVVM Starter"
+            <TextBlock Text ="Mr. Tuckers Car Dealership"
                        RelativePanel.RightOf="HamburgerButton"
                        FontSize="28"
                        FontWeight="Bold"
