@@ -99,13 +99,6 @@
                                  Text="{Binding DetailsViewModel.SlutPris, Mode=TwoWay}" />
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Style="{StaticResource TextBlockStyle}" 
-                               Text="{Binding ViewControlStates[BilVask].Description}"/>
-                    <ToggleSwitch
-                        x:Name="ToggleSwitch" IsOn="{Binding DetailsViewModel.BilVask, Mode=Twoway}" 
-                    ></ToggleSwitch>
-                </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}"
@@ -161,7 +154,14 @@
                         </ComboBox.ItemTemplate>
                     </ComboBox>
                 </StackPanel>
-
+                
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource TextBlockStyle}" 
+                               Text="{Binding ViewControlStates[BilVask].Description}"/>
+                    <ToggleSwitch
+                        x:Name="ToggleSwitch" IsOn="{Binding DetailsViewModel.BilVask, Mode=Twoway}" 
+                    ></ToggleSwitch>
+                </StackPanel>
 
             </StackPanel>
 
