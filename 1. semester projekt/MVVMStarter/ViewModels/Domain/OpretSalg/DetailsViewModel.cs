@@ -169,5 +169,10 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
 
             return false;
         }
+
+        public int FakturaNr
+        {
+            get { return DomainObject.FakturaNr; }
+        }
     }
 }

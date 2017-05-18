@@ -99,6 +99,16 @@
                                  Text="{Binding DetailsViewModel.Pris, Mode=TwoWay}" />
                 </StackPanel>
 
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource TextBlockStyle}" 
+                                   Text="{Binding ViewControlStates[FakturaNr].Description}"/>
+                    <TextBox Style="{StaticResource TextBoxStyle}" 
+                                 IsEnabled="{Binding ViewControlStates[FakturaNr].Enabled}"
+                                 Visibility="{Binding ViewControlStates[FakturaNr].VisibilityState}"
+                                
+                                 Text="{Binding DetailsViewModel.FakturaNr, Mode=TwoWay}" />
+                </StackPanel>
+
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}"

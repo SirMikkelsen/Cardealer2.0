@@ -1,10 +1,10 @@
 ﻿using MVVMStarter.ViewModels.Base;
-using _REPLACEME_Class = MVVMStarter.Models.Domain.Bil.Bil;
+using BilClass = MVVMStarter.Models.Domain.Bil.Bil;
 
 
 namespace MVVMStarter.ViewModels.Domain.Bil
 {
-    public class ItemViewModel : ItemViewModelBase<_REPLACEME_Class>
+    public class ItemViewModel : ItemViewModelBase<BilClass>
     {
         // Override any of the below properties, if you wish to
         // replace the default implementation with your own
@@ -35,7 +35,7 @@ namespace MVVMStarter.ViewModels.Domain.Bil
         //    get { return true; }
         //}
 
-        public ItemViewModel(_REPLACEME_Class obj) : base(obj)
+        public ItemViewModel(BilClass obj) : base(obj)
         {
         }
     }
