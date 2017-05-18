@@ -14,6 +14,7 @@ namespace MVVMStarter.Models.Domain.OpretSalg
         private int _kundekey;
         private int _sælgerkey;
         private DateTimeOffset _salgsdato;
+        private int _fakturaNr;
         private Bil.Bil _b1;
         private Random _rng = new Random();
 
@@ -80,11 +81,12 @@ namespace MVVMStarter.Models.Domain.OpretSalg
             _kundekey = NullKey;
 
             _salgsdato = DateTimeOffset.Now;
+            _fakturaNr = _rng.Next(100000, 1000000);
         }
 
         public int FakturaNr
         {
-            get { return _rng.Next(100000, 999999); }
+            get { return _fakturaNr; }
         }
 
     }
