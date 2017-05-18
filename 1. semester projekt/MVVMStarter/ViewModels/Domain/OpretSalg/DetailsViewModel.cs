@@ -30,10 +30,6 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             get { return DomainObject.Pris; }
         }
 
-        public int FakturaNr
-        {
-            get { return DomainObject.FakturaNr; }
-        }
 
         public bool BilVask
         {
