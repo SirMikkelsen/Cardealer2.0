@@ -20,6 +20,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             fixedProperties.Add("Kunde");
             fixedProperties.Add("Sælger");
             fixedProperties.Add("Pris");
+            fixedProperties.Add("FakturaNr");
             fixedProperties.Add("BilVask");
             fixedProperties.Add("FakturaNr");
 
