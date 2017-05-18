@@ -25,9 +25,9 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             }
         }
 
-        public double SlutPris
+        public double Pris
         {
-            get { return DomainObject.SlutPris; }
+            get { return DomainObject.Pris; }
         }
 
         public bool BilVask

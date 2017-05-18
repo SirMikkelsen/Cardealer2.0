@@ -91,12 +91,12 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
-                                   Text="{Binding ViewControlStates[SlutPris].Description}"/>
+                                   Text="{Binding ViewControlStates[Pris].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
-                                 IsEnabled="{Binding ViewControlStates[SlutPris].Enabled}"
-                                 Visibility="{Binding ViewControlStates[SlutPris].VisibilityState}"
+                                 IsEnabled="{Binding ViewControlStates[Pris].Enabled}"
+                                 Visibility="{Binding ViewControlStates[Pris].VisibilityState}"
                                 
-                                 Text="{Binding DetailsViewModel.SlutPris, Mode=TwoWay}" />
+                                 Text="{Binding DetailsViewModel.Pris, Mode=TwoWay}" />
                 </StackPanel>
 
 

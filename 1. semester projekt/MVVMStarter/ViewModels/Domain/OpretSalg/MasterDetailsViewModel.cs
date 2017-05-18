@@ -19,7 +19,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             fixedProperties.Add("Bil");
             fixedProperties.Add("Kunde");
             fixedProperties.Add("Sælger");
-            fixedProperties.Add("SlutPris");
+            fixedProperties.Add("Pris");
             fixedProperties.Add("BilVask");
 
             List<string> nonFixedKeyProperties = new List<string>();

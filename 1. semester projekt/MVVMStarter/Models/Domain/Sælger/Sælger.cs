@@ -36,17 +36,17 @@ namespace MVVMStarter.Models.Domain.Sælger
                 {
                     if (salg.SælgerKey == Key)
                     {
-                        if (salg.SlutPris <= 100000)
+                        if (salg.Pris <= 100000)
                         {
-                            totalKommision += salg.SlutPris * 0.05;
+                            totalKommision += salg.Pris * 0.05;
                         }
-                        else if ((salg.SlutPris > 100000) && (salg.SlutPris <= 200000))
+                        else if ((salg.Pris > 100000) && (salg.Pris <= 200000))
                         {
-                            totalKommision += salg.SlutPris * 0.07;
+                            totalKommision += salg.Pris * 0.07;
                         }
                         else
                         {
-                            totalKommision += salg.SlutPris * 0.10;
+                            totalKommision += salg.Pris * 0.10;
                         }
 
                     }
