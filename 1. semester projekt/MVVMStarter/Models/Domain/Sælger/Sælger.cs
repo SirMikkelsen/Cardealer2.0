@@ -65,6 +65,7 @@ namespace MVVMStarter.Models.Domain.Sælger
             Navn = "(Navn)";
             Email = "(Email)";
             TlfNr = (12345678);
+            _kommission = (0);
             // Set default values for properties here
         }
     }
