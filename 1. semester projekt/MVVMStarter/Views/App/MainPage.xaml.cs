@@ -27,18 +27,7 @@ namespace MVVMStarter.Views.App
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (PhotoView.IsSelected)
-            {
-                AppFrame.Navigate(typeof(Domain.Photo.View));
-            }
-            if (PairView.IsSelected)
-            {
-                AppFrame.Navigate(typeof(Domain.Pair.View));
-            }
-            if (StudentView.IsSelected)
-            {
-                AppFrame.Navigate(typeof(Domain.Student.View));
-            }
+        
             if (BilView.IsSelected)
             {
                 AppFrame.Navigate(typeof(Domain.Bil.View));

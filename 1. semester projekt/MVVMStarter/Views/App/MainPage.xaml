@@ -33,24 +33,9 @@
                    CompactPaneLength="56">
             <SplitView.Pane>
                 <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
-                    <ListBoxItem Name="PhotoView">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/Domain/Photo/Photo.jpg"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Photos</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="PairView">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/Domain/Pair/Pair.jpg"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Pairs</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="StudentView">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Width="40" Height="40" Source="ms-appx:///Assets/Domain/Student/Student.jpg"/>
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Students</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
+                    
+                    
+                    
                     <ListBoxItem Name="SælgerView">
                         <StackPanel Orientation="Horizontal">
                             <Image Width="40" Height="40" Source="ms-appx:///Assets/Domain/Sælger/01.jpg"/>

@@ -168,7 +168,7 @@
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                Text="{Binding ViewControlStates[BilVask].Description}"/>
                     <ToggleSwitch
-                        IsOn="{Binding DetailsViewModel.BilVask, Mode=Twoway}" 
+                        IsOn="{Binding DetailsViewModel.BilVask, Mode=Twoway}" IsEnabled="False"
                     ></ToggleSwitch>
                 </StackPanel>
 

@@ -1,4 +1,6 @@
-﻿using MVVMStarter.Configuration.App;
+﻿using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using MVVMStarter.Configuration.App;
 using MVVMStarter.Models.Base;
 using MVVMStarter.Validators.App;
 
@@ -15,7 +17,21 @@ namespace MVVMStarter.Models.Domain.Bil
         private int _stelNr;
         private double _pris;
 
+        List< string>  type = new List<string>();
 
+        public void  AddType ()
+        {
+            type.Add("Sport");
+            type.Add("Coupe");
+            type.Add("Sedan");
+        }
+
+        
+
+
+            
+          
+        
 
         public string Brand
         {
