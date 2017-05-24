@@ -93,9 +93,8 @@
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                    Text="{Binding ViewControlStates[Pris].Description}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}" 
-                                 IsEnabled="{Binding ViewControlStates[Pris].Enabled}"
+                                 IsEnabled="False"
                                  Visibility="{Binding ViewControlStates[Pris].VisibilityState}"
-                                
                                  Text="{Binding DetailsViewModel.Pris, Mode=TwoWay}" />
                 </StackPanel>
 
@@ -168,7 +167,8 @@
                     <TextBlock Style="{StaticResource TextBlockStyle}" 
                                Text="{Binding ViewControlStates[BilVask].Description}"/>
                     <ToggleSwitch
-                        IsOn="{Binding DetailsViewModel.BilVask, Mode=Twoway}" IsEnabled="False"
+                        IsOn="{Binding DetailsViewModel.BilVask, Mode=Twoway}" 
+                        IsEnabled="False"
                     ></ToggleSwitch>
                 </StackPanel>
 

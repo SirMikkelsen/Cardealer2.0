@@ -128,7 +128,7 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             _observableCollectionKunde = new ObservableCollection<Kunde.ItemViewModel>();
             _observableCollectionSælger = new ObservableCollection<Sælger.ItemViewModel>();
 
-            foreach (var bil in FrieBiler())
+            foreach (var bil in ObjectProvider.BilCatalog.All)
             {
                 _observableCollectionBil.Add(new Bil.ItemViewModel(bil));
             }
@@ -141,34 +141,6 @@ namespace MVVMStarter.ViewModels.Domain.OpretSalg
             {
                 _observableCollectionKunde.Add(new Kunde.ItemViewModel(kunde));
             }
-        }
-
-        List<Models.Domain.Bil.Bil> FrieBiler()
-        {
-            List<Models.Domain.Bil.Bil> biler = new List<Models.Domain.Bil.Bil>();
-
-            foreach (var bil in ObjectProvider.BilCatalog.All)
-            {
-                if (!BilErSolgt(bil))
-                {
-                    biler.Add(bil);
-                }
-            }
-
-            return biler;
-        }
-
-        bool BilErSolgt(Models.Domain.Bil.Bil enBil)
-        {
-            foreach (var salg in ObjectProvider.SalgsCatalog.All)
-            {
-                if (salg.BilKey == enBil.Key)
-                {
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         public int FakturaNr
